@@ -1,8 +1,8 @@
-import csv
 import random
 from datetime import date, timedelta
 from pathlib import Path
 
+import pandas as pd
 from faker import Faker
 
 # Optional: this script creates data/orders.csv.
@@ -49,9 +49,7 @@ for order_num in range(1, 151):
         }
     )
 
-with output_path.open("w", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=rows[0].keys())
-    writer.writeheader()
-    writer.writerows(rows)
+orders = pd.DataFrame(rows)
+orders.to_csv(output_path, index=False)
 
 print(f"Wrote {len(rows)} rows to {output_path}")
