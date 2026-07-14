@@ -31,10 +31,19 @@ print(sentence)
 # Type a few string method examples here:
 
 # What's a case where you might want .lower() or .upper()?
+name.upper()
+name.lower()
 
 # What's a case where you might want .strip()?
+my_string = "                             asdfasdf                  "
+my_string.strip()
+
+my_string = "        \t               asdfasdf      \n\t      "
+my_string.strip()
 
 # What's a case where you might want .split()?
+fake_csv_row = "1, 2008-01-12, sithlord2342, 123123"
+fake_csv_row.split(", ")
 
 # A list is an ordered collection of values.
 products = ["hoodie", "cap", "mug", "sticker"]
@@ -47,6 +56,9 @@ print(products)
 # * products[-1] is the last item
 #
 # Pull a few products here:
+products[0]
+products[len(products) - 1]
+products[-2]
 
 
 # Slicing pulls multiple values.
@@ -57,9 +69,15 @@ print(products)
 # * list[start:stop:step] can skip values
 #
 # Type a few indexing/slicing examples here:
+products[0:2]
+products[:2]
+products[1:]
+products[0:4:2]
+products[::2]
+products[1::2]
 
 # What do you think products[1:3] will return?
-
+print("")
 # What do you think products[:2] will return?
 
 # What do you think products[::2] will return?
@@ -69,14 +87,23 @@ print(products)
 # * .extend() adds several items
 # * + can combine lists into a new list
 # * assigning by index replaces an item
+my_list = ["asdf", 1, False, ["ased"]]
 
 # Try adding one product:
+products.append("socks")
 
 # Try adding several products:
+new_products = ["shoes", "pants"]
+# products.append(new_products)
+products.extend(new_products)
 
 # Try combining two lists:
 apparel = ["hoodie", "cap"]
 home = ["mug", "blanket"]
+
+all_products = apparel + home
+apparel.extend(home)  # ["hoodie", "cap", "mug", "blanket"]
+apparel.append(home)  # ["hoodie", "cap", ["mug", "blanket"]]
 
 # Try replacing one item in products:
 
@@ -86,6 +113,9 @@ products_a = ["hoodie", "cap"]
 products_b = products_a
 
 # Try appending to products_b, then print both products_a and products_b.
+products_b.append("socks")
+
+products_a
 
 # Try again with .copy().
 products_a = ["hoodie", "cap"]

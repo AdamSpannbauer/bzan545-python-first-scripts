@@ -35,10 +35,21 @@ print(cost)
 # * square root with ** 0.5
 #
 # Type a few calculator examples here:
+1 + 134
 
 # What's a case where you might want to use //?
+10 // 3
+10 % 3
+
+10**2
+10**0.5
+
+import math
+
+math.sqrt(10)
 
 # What's a case where you might want to use %?
+# What's a case where you might want to use \\?
 
 # Types are the kind of value something is.
 # Common first data types:
@@ -57,6 +68,8 @@ print(type(product))
 print(type(is_available))
 
 # What data types might you already know of from other programming languages?
+x_tuple = (1, 2)  # immutable
+x_list = [1, 2]  # mutable
 
 # Operators can behave differently with different types.
 # * number + number does math
@@ -64,19 +77,23 @@ print(type(is_available))
 # * string * int repeats the string
 #
 # Type a few operator examples here:
+1 + 823
+"Rocky" + "Top"
+"Both lose" * 10
+["asdf"] * 10
 
 
 # Pizza calculator (very important work in progress)
-n_people = 3
-slices_per_person = 5
-n_pizzas = 6
-slices_per_pizza = 8
+# n_people = 3
+# slices_per_person = 5
+# n_pizzas = 6
+# slices_per_pizza = 8
 
-# ?????
-# ?????
-# ?????
+# # ?????
+# # ?????
+# # ?????
 
-print(remaining_slices)
+# print(remaining_slices)
 
 # Practice word problems (too many for us to do all together....)
 #

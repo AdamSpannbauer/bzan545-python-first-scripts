@@ -1,6 +1,12 @@
+# Loading needed packages
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+# Object Oriented Programming (OOP) - nouns have verbs
+#   df.head()
+# Functional programming - verbs applied to nouns
+#   head(df)
 
 orders = pd.read_csv("data/orders.csv")
 
@@ -10,5 +16,10 @@ print(orders.head())
 print("Rows and columns")
 print(orders.shape)
 
-sns.scatterplot(x="quantity", y="order_total", hue="category", data=orders)
+sns.scatterplot(
+    x="quantity",
+    y="order_total",
+    hue="category",
+    data=orders,
+)
 plt.show()
